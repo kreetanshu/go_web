@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  status: MyString
+  references: MyString
+  service_provider_id: 1
+  user_id: 1
+  request_time: 2016-01-12 23:03:01
+  promised_time: 2016-01-12 23:03:01
+
+two:
+  address: MyText
+  status: MyString
+  references: MyString
+  service_provider_id: 1
+  user_id: 1
+  request_time: 2016-01-12 23:03:01
+  promised_time: 2016-01-12 23:03:01

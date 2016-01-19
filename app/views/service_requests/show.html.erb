@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @service_request.address %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @service_request.status %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @service_request.references %>
+</p>
+
+<p>
+  <strong>Service provider:</strong>
+  <%= @service_request.service_provider_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service_request.user_id %>
+</p>
+
+<p>
+  <strong>Request time:</strong>
+  <%= @service_request.request_time %>
+</p>
+
+<p>
+  <strong>Promised time:</strong>
+  <%= @service_request.promised_time %>
+</p>
+
+<%= link_to 'Edit', edit_service_request_path(@service_request) %> |
+<%= link_to 'Back', service_requests_path %>

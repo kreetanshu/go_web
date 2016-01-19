@@ -1,0 +1,49 @@
+<%= form_for(@service_request) do |f| %>
+  <% if @service_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being saved:</h2>
+
+      <ul>
+      <% @service_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+
+ <!-- <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>-->
+  
+  <!--
+  <div class="field">
+    <%= f.label :service_provider_id %><br>
+    <%= f.number_field :service_provider_id %>
+  </div> -->
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :request_time %><br>
+    <%= f.datetime_select :request_time %>
+  </div>
+   <!-- <div class="field">
+
+  <%= f.label :promised_time %><br>
+    <%= f.datetime_select :promised_time %>
+  </div> -->
+  <div class="field">
+    <%= f.label :Food_Type %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Order Now" %>
+  </div>
+<% end %>

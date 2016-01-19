@@ -1,0 +1,23 @@
+
+ <% @service_requests.each do |service_request| %>
+      <div class="post">
+       
+        <h2 class="title">
+        <%= service_request.user_id %>
+        </h2>
+        <div class="entry"> 
+        <%= service_request.address %>
+        <%= service_request.status %>
+        <%= service_request.references %>
+        <%= service_request.service_provider_id %>
+        <%= service_request.request_time %>
+        <%= service_request.promised_time %>
+        </div>
+        <div class="byline">
+        <%= link_to 'Show', service_request %>
+        <%= link_to 'Edit', edit_service_request_path(service_request) %>
+        <%= link_to 'Destroy', service_request, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
