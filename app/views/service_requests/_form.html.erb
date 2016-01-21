@@ -15,21 +15,22 @@
     <%= f.label :address %><br>
     <%= f.text_area :address %>
   </div>
-
- <!-- <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>-->
+  <div>
+ <%= f.label :Order_Status %><br>
+    <%= f.select :status, ['Confirm', 'Cancel'] %>
+  </div>
   
+
   <!--
   <div class="field">
     <%= f.label :service_provider_id %><br>
     <%= f.number_field :service_provider_id %>
   </div> -->
+<!--
   <div class="field">
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :request_time %><br>
     <%= f.datetime_select :request_time %>

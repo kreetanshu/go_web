@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def resources
-  	@service_requests = ServiceRequest.all
+  #	@service_requests = ServiceRequest.all
   end
 end

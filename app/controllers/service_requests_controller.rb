@@ -1,16 +1,21 @@
 class ServiceRequestsController < ApplicationController
   before_action :set_service_request, only: [:show, :edit, :update, :destroy]
-
+ before_action :authenticate_user!
   # GET /service_requests
   # GET /service_requests.json
   def index
-    @service_requests = ServiceRequest.all
+    #posts = ServiceRequest.all 
+    begin
+    @service_requests = current_user.service_requests
+    rescue
+    # flash.now[:notice] = "Request Not Found" 
+    end
   end
 
   # GET /service_requests/1
   # GET /service_requests/1.json
   def show
-    
+    #@posts = ServiceRequest.where(:user_id => current_user.id)
   end
 
   # GET /service_requests/new
@@ -26,6 +31,8 @@ class ServiceRequestsController < ApplicationController
   # POST /service_requests.json
   def create
     @service_request = ServiceRequest.new(service_request_params)
+    @service_request.user_id = current_user.id
+
 
     respond_to do |format|
       if @service_request.save

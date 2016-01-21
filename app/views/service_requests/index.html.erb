@@ -6,31 +6,39 @@
 <table>
   <thead>
     <tr>
+      <th>Date</th>
       <th>Address</th>
       <th>Status</th>
-      <th>References</th>
-      <th>Service provider</th>
-      <th>User</th>
-      <th>Request time</th>
-      <th>Promised time</th>
+      <th>Food Type</th>
+      
+      
+      <th>Requested time</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+   <%-# commented : checking if @posts is empty -%>
+<% if @service_requests.nil? %> 
+  <span>Sorry, no request made !! </span>
+<% else %>
+
     <% @service_requests.each do |service_request| %>
       <tr>
+        <td><%= service_request.created_at.strftime("%b %d. %Y") %></td>
         <td><%= service_request.address %></td>
         <td><%= service_request.status %></td>
         <td><%= service_request.references %></td>
-        <td><%= service_request.service_provider_id %></td>
-        <td><%= service_request.user_id %></td>
+        
+       
         <td><%= service_request.request_time %></td>
-        <td><%= service_request.promised_time %></td>
+       
         <td><%= link_to 'Show', service_request %></td>
-        <td><%= link_to 'Edit', edit_service_request_path(service_request) %></td>
-        <td><%= link_to 'Destroy', service_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Update', edit_service_request_path(service_request) %></td>
+       
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

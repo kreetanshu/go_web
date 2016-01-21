@@ -9,7 +9,7 @@
 						<ul> <li><%= link_to "Home", root_path %></li>
 						  
 						 <% if user_signed_in? %>
-                         <li><%= link_to "Service Requests", service_requests_path %></li>
+                         <li><%= link_to "All Requests", service_requests_path %></li>
                          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
                          <% else %>
                          <li><%= link_to "Log in", new_user_session_path %></li>
