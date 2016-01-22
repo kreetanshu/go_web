@@ -1,3 +1,5 @@
+<div class="row">
+ <div class="col-md-6 col-md-offset-1">
 <%= form_for(@service_request) do |f| %>
   <% if @service_request.errors.any? %>
     <div id="error_explanation">
@@ -11,14 +13,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  
     <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </div>
-  <div>
+    <%= f.text_area :address, class: 'form-control' %>
+  
  <%= f.label :Order_Status %><br>
-    <%= f.select :status, ['Confirm', 'Cancel'] %>
-  </div>
+    <%= f.select :status, ['Confirm', 'Cancel'], class: 'form-control' %></br>
+  
   
 
   <!--
@@ -31,20 +32,21 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div> -->
-  <div class="field">
+ 
     <%= f.label :request_time %><br>
-    <%= f.datetime_select :request_time %>
-  </div>
+    <%= f.datetime_select :request_time, class: 'form-control' %>
+ 
    <!-- <div class="field">
 
   <%= f.label :promised_time %><br>
     <%= f.datetime_select :promised_time %>
   </div> -->
-  <div class="field">
+ 
     <%= f.label :Food_Type %><br>
-    <%= f.text_field :references %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Order Now" %>
-  </div>
+    <%= f.text_field :references, class: 'form-control' %>
+  
+    <%= f.submit "Order Now", class: "btn btn-primary" %>
+  
 <% end %>
+</div>
+</div>

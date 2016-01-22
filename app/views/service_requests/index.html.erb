@@ -1,15 +1,17 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Service Requests</h1>
+<h3>Your Previous Bookings</h3>
+<div class="table-responsive">
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
+      <th>Sl No:</th>
       <th>Date</th>
       <th>Address</th>
       <th>Status</th>
-      <th>Food Type</th>
+      <th>Food</th>
       
       
       <th>Requested time</th>
@@ -23,9 +25,12 @@
 <% if @service_requests.nil? %> 
   <span>Sorry, no request made !! </span>
 <% else %>
-
+ <%count= @service_requests.count%>
+ <%sl=1%>
+ 
     <% @service_requests.each do |service_request| %>
       <tr>
+        <td><%= sl if sl<=count %></td>
         <td><%= service_request.created_at.strftime("%b %d. %Y") %></td>
         <td><%= service_request.address %></td>
         <td><%= service_request.status %></td>
@@ -38,10 +43,12 @@
         <td><%= link_to 'Update', edit_service_request_path(service_request) %></td>
        
       </tr>
+      <% sl+=1%>
     <% end %>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
