@@ -6,7 +6,7 @@ class ServiceRequestsController < ApplicationController
   def index
     #posts = ServiceRequest.all 
     begin
-    @service_requests = current_user.service_requests
+    @service_requests = current_user.service_requests.order("created_at DESC")
     rescue
     # flash.now[:notice] = "Request Not Found" 
     end

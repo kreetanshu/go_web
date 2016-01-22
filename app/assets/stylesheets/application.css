@@ -38,7 +38,7 @@ a:hover{ text-decoration: none; }
 #logo a { border: none; background: none; text-decoration: none; color: #707070 } 
 Logo */ 
 /* Search */ 
-#search { float: right; width: 280px; height: 60px; padding: 20px 0px 0px 30px } 
+/*#search { float: right; width: 280px; height: 60px; padding: 20px 0px 0px 0px } 
 /*#search form { height: 41px; margin: 0; padding: 10px 0 0 0px; } 
 #search fieldset { margin: 0; padding: 0; border: none; } 
 #search-text { width: 170px; height: 19px; padding: 4px 5px 1px 5px; border: none; background: #FFFFFF; text-transform: lowercase; font: normal 11px Arial, Helvetica, sans-serif; color: #5D781D; } 
@@ -72,11 +72,11 @@ Logo */
 .links a { } 
 
 /* Sidebar */ 
-#sidebar { float: left; width: 300px; margin: 0px; padding: 20px 20px 0px 30px; } 
+#sidebar { float: left; width: 500px; margin: 0px; padding: 65px 20px 0px 140px; } 
 #sidebar ul { margin: 0; padding: 0; list-style: none; } 
 #sidebar li { margin: 0; padding: 0; } 
 #sidebar li ul { margin: 0px 0px; padding-bottom: 30px; } 
-#sidebar li li { line-height: 35px; border-bottom: 1px dashed #191919; background: url (images/img01.jpg) no-repeat left 15px; margin: 0px 20px 0px 20px; border-left: none; text-align: left; } #sidebar li li span { display: block; margin-top: -20px; padding: 0; font-size: 11px; font-style: italic; } 
+#sidebar li li { line-height: 35px; background: url (images/img01.jpg) no-repeat left 15px; margin: 0px 20px 0px 20px; border-left: none; text-align: left; } #sidebar li li span { display: block; margin-top: -20px; padding: 0; font-size: 11px; font-style: italic; } 
 #sidebar li li a { padding: 0px 0px 0px 0px; } 
 #sidebar h2 { height: 31px; margin: 0px 0px 0px 0px; padding: 10px 0px 0px 20px; background: url(images/img03.jpg) no-repeat left top; text-shadow: #203060 -1px 1px 2px; text-align: left; text-transform: uppercase; letter-spacing: -0.5em; font-size: 2em; color: #FFFFFF; } #sidebar p { margin: 0 0px; padding: 0px 20px 20px 20px; text-align: justify; color: #847F7E; } 
 #sidebar a { border: none; color: #847F7E; } 
