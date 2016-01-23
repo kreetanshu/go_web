@@ -40,8 +40,9 @@
         <td><%= service_request.request_time %></td>
        
         <td><%= link_to 'Show', service_request %></td>
+        <% if service_request.request_time >= Time.now %>
         <td><%= link_to 'Update', edit_service_request_path(service_request) %></td>
-       
+         <% end %>
       </tr>
       <% sl+=1%>
     <% end %>

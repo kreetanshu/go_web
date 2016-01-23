@@ -49,6 +49,7 @@ class ServiceRequestsController < ApplicationController
   # PATCH/PUT /service_requests/1.json
   def update
     respond_to do |format|
+      if @service_request.request_time >= Time.now
       if @service_request.update(service_request_params)
         format.html { redirect_to @service_request, notice: 'Service request was successfully updated.' }
         format.json { render :show, status: :ok, location: @service_request }
@@ -56,6 +57,8 @@ class ServiceRequestsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @service_request.errors, status: :unprocessable_entity }
       end
+    end
+
     end
   end
 
@@ -78,6 +81,6 @@ class ServiceRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_request_params
-      params.require(:service_request).permit(:address, :status, :references, :service_provider_id, :user_id, :request_time, :promised_time)
+      params.require(:service_request).permit(:address, :status, :references,:request_time)
     end
 end

@@ -5,7 +5,7 @@ $light-gray: #777;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 60px -20px 0px 0px;
 }
 
 section {
@@ -21,6 +21,19 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+#content {
+    float: right;
+    width: 600px;
+    padding: 40px 0px 20px 0px;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-left: -40px;
 }
 
 /* typography */
@@ -139,6 +152,7 @@ section {
     }
   }
 }
+
 
 .gravatar {
   float: left;
