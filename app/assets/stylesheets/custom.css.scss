@@ -1,11 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 $light-gray: #777;
 
 /* universal */
 
 body {
   padding-top: 60px -20px 0px 0px;
+  background-color: lightblue;
+  background-image: url("11214306_1102221773123788_8719984588763356094_n.jpg");
 }
 
 section {
